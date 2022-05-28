@@ -5,6 +5,11 @@ import Services from "./components/HomePage/Services/Services";
 import NotFound from "./components/NotFound/NotFound";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Register from "./components/Login/Register/Register";
+import Login from "./components/Login/Login/Login";
+// import CheckOut from "./CheckOut/CheckOut";
+// import RequireAuth from "./Login/RequireAuth/RequireAuth";
+import ForgotPassword from "./components/Login/ForgotPassword/ForgotPassword";
 
 function App() {
   return (
@@ -14,16 +19,16 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
-        {/* <Route path="/login" element={<Login></Login>}></Route>
-  <Route path="/register" element={<Register></Register>}></Route>
-  <Route path="/blog" element={<Blog></Blog>}></Route>
-  <Route path="/about" element={<About></About>}></Route> */}
+        <Route path="/login" element={<Login></Login>}></Route>
+        <Route path="/register" element={<Register></Register>}></Route>
+        {/* <Route path="/blog" element={<Blog></Blog>}></Route>
+        <Route path="/about" element={<About></About>}></Route> */}
         <Route path="/services" element={<Services></Services>}></Route>
+        <Route
+          path="/forgotPassword"
+          element={<ForgotPassword></ForgotPassword>}
+        ></Route>
         {/* <Route
-    path="/forgotPassword"
-    element={<ForgotPassword></ForgotPassword>}
-  ></Route>
-  <Route
     path="/checkout/:productId"
     element={
       <RequireAuth>
