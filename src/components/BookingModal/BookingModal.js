@@ -21,6 +21,7 @@ const BookingModal = (props) => {
 
     const order = {
       product: product?.name,
+      price: product?.price,
       name,
       email,
       quantity,

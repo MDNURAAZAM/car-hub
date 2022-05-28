@@ -5,7 +5,7 @@ import { Link, Outlet } from "react-router-dom";
 const Dashboard = () => {
   return (
     <div className="container ">
-      <h2 className="text-primary text-center mt-5 fs-1">DASHBOARD</h2>
+      <h1 className="text-primary text-center mt-5 fs-1">DASHBOARD</h1>
       <div className="row shadow">
         <div className="col-4 mt-5">
           <div className="row">
