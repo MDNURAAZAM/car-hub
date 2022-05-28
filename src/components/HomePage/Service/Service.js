@@ -1,15 +1,14 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-// import { useNavigate } from "react-router-dom";
-// import CheckOut from "../../CheckOut/CheckOut";
+import { useNavigate } from "react-router-dom";
 
 const Service = ({ service }) => {
-  const { id, name, price, description, image, available, minimumOrder } =
+  const { _id, name, price, description, image, available, minimumOrder } =
     service;
-  // const navigate = useNavigate();
-  // const handleCheckout = (id) => {
-  //   navigate(`/checkout/${id}`);
-  // };
+  const navigate = useNavigate();
+  const handleCheckout = (id) => {
+    navigate(`/checkout/${id}`);
+  };
   return (
     <Card className="mx-5 shadow rounded">
       <Card.Img variant="top" src={image} className="img-fluid" height={30} />
@@ -24,7 +23,7 @@ const Service = ({ service }) => {
       <Card.Footer className="bg-light text-center">
         <button
           className="btn btn-primary px-5"
-          // onClick={() => handleCheckout(id)}
+          onClick={() => handleCheckout(_id)}
         >
           CHECKOUT
         </button>

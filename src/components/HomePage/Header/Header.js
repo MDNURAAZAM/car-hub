@@ -32,6 +32,11 @@ const Header = () => {
               <Nav.Link as={Link} to="/about" className="text-white fs-5">
                 ABOUT
               </Nav.Link>
+              {user && (
+                <Nav.Link as={Link} to="/dashboard" className="text-white fs-5">
+                  DASHBOARD
+                </Nav.Link>
+              )}
               {user ? (
                 <button
                   className="btn btn-link text-white text-decoration-none fs-5"

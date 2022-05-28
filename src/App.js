@@ -7,9 +7,14 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Register from "./components/Login/Register/Register";
 import Login from "./components/Login/Login/Login";
+import RequireAuth from "./components/Login/RequireAuth/RequireAuth";
 // import CheckOut from "./CheckOut/CheckOut";
 // import RequireAuth from "./Login/RequireAuth/RequireAuth";
 import ForgotPassword from "./components/Login/ForgotPassword/ForgotPassword";
+import Checkout from "./components/Checkout/Checkout";
+import Dashboard from "./components/Dashboard/Dashboard";
+import MyOrders from "./components/Dashboard/MyOrders";
+import AddReview from "./components/Dashboard/AddReview";
 
 function App() {
   return (
@@ -28,14 +33,25 @@ function App() {
           path="/forgotPassword"
           element={<ForgotPassword></ForgotPassword>}
         ></Route>
-        {/* <Route
-    path="/checkout/:productId"
-    element={
-      <RequireAuth>
-        <CheckOut></CheckOut>
-      </RequireAuth>
-    }
-  ></Route> */}
+        <Route
+          path="/checkout/:productId"
+          element={
+            <RequireAuth>
+              <Checkout></Checkout>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="dashboard"
+          element={
+            <RequireAuth>
+              <Dashboard></Dashboard>
+            </RequireAuth>
+          }
+        >
+          <Route index element={<MyOrders></MyOrders>}></Route>
+          <Route path="addReview" element={<AddReview></AddReview>}></Route>
+        </Route>
 
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
