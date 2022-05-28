@@ -3,6 +3,8 @@ import Header from "./components/HomePage/Header/Header";
 import Home from "./components/HomePage/Home/Home";
 import Services from "./components/HomePage/Services/Services";
 import NotFound from "./components/NotFound/NotFound";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -32,6 +34,8 @@ function App() {
 
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
+
+      <ToastContainer></ToastContainer>
     </div>
   );
 }

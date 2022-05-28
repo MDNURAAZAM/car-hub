@@ -1,23 +1,29 @@
 [
   {
     "id": 1,
-    "name": "HEART SURGERY",
-    "price": 5000,
-    "img": "./serviceImages/image1.jpg",
-    "description": "Open-heart surgery (also called traditional heart surgery) is when the surgeon cuts the chest open to reach the heart. Because it's difficult to operate on a beating heart, medicines are used to stop the heart. A heart-lung bypass machine keeps oxygen-rich blood pumping through the body during the surgery."
+    "name": "Wheel",
+    "price": 50,
+    "available": 500,
+    "minimumOrder": 80,
+    "image": "https://i.ibb.co/0GYjv7b/9b8b31efb1b1a6d5ea8529238320fea2-car-share-car-wheels-removebg-preview.png",
+    "description": "The wheel consists of an inner section, called the barrel, with taller outer and inner rims where the tire sits. The part of the wheel you see when it’s on the car is called the outboard or cosmetic face. The wheel size is its diameter and is measured in inches, such as a 17-inch wheel."
   },
   {
     "id": 2,
-    "name": "KIDNEY SURGERY",
-    "price": 4000,
-    "img": "./serviceImages/image-2.jpg",
-    "description": "A nephrectomy is surgery to remove a kidney. Your surgeon may perform a partial nephrectomy to remove only a portion of your kidney. Or you may have a radical nephrectomy, where your surgeon removes your entire kidney. If you have kidney disease or cancer, a nephrectomy can be a life-saving procedure."
+    "name": "Tire",
+    "price": 30,
+    "available": 800,
+    "minimumOrder": 100,
+    "image": "https://i.ibb.co/8XcQPBz/ckkmtvfzp05qg01lmvu34lj89-4w-181-3528706008092-tire-michelin-defender-ltx-m-slash-s-275-slash-55-r20.png",
+    "description": "A tire (American English) or tyre (British English) is a ring-shaped component that surrounds a wheel's rim to transfer a vehicle's load from the axle through the wheel to the ground and to provide traction on the surface over which the wheel travels."
   },
   {
     "id": 3,
-    "name": "LIVER SURGERY",
-    "price": 4000,
-    "img": "./serviceImages/image3.png",
-    "description": "A liver resection is the surgical removal of all or a portion of the liver. It is also referred to as a hepatectomy, full or partial. A complete liver resection is performed in the setting of a transplant a diseased liver is removed from a deceased donor (cadaver)."
+    "name": "Headlight",
+    "price": 20,
+    "available": 1500,
+    "minimumOrder": 200,
+    "image": "https://i.ibb.co/52BnVCT/car-headlight-500x500-removebg-preview.png",
+    "description": "A headlamp is a lamp attached to the front of a vehicle to illuminate the road ahead. Headlamps are also often called headlights, but in the most precise usage, headlamp is the term for the device itself and headlight is the term for the beam of light produced and distributed by the device."
   }
 ]
