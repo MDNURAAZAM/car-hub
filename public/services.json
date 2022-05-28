@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "HEART SURGERY",
+    "price": 5000,
+    "img": "./serviceImages/image1.jpg",
+    "description": "Open-heart surgery (also called traditional heart surgery) is when the surgeon cuts the chest open to reach the heart. Because it's difficult to operate on a beating heart, medicines are used to stop the heart. A heart-lung bypass machine keeps oxygen-rich blood pumping through the body during the surgery."
+  },
+  {
+    "id": 2,
+    "name": "KIDNEY SURGERY",
+    "price": 4000,
+    "img": "./serviceImages/image-2.jpg",
+    "description": "A nephrectomy is surgery to remove a kidney. Your surgeon may perform a partial nephrectomy to remove only a portion of your kidney. Or you may have a radical nephrectomy, where your surgeon removes your entire kidney. If you have kidney disease or cancer, a nephrectomy can be a life-saving procedure."
+  },
+  {
+    "id": 3,
+    "name": "LIVER SURGERY",
+    "price": 4000,
+    "img": "./serviceImages/image3.png",
+    "description": "A liver resection is the surgical removal of all or a portion of the liver. It is also referred to as a hepatectomy, full or partial. A complete liver resection is performed in the setting of a transplant a diseased liver is removed from a deceased donor (cadaver)."
+  }
+]

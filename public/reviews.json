@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Abul",
+    "description": "Authentic service with care",
+    "rating": 9
+  },
+  {
+    "id": 2,
+    "name": "Babul",
+    "description": "Professional service with reasonable price",
+    "rating": 8.5
+  },
+  {
+    "id": 3,
+    "name": "Kabul",
+    "description": "Good behavior and awesome communication",
+    "rating": 9.5
+  }
+]
