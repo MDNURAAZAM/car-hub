@@ -15,6 +15,7 @@ import Checkout from "./components/Checkout/Checkout";
 import Dashboard from "./components/Dashboard/Dashboard";
 import MyOrders from "./components/Dashboard/MyOrders";
 import AddReview from "./components/Dashboard/AddReview";
+import Blog from "./components/Blog/Blog";
 
 function App() {
   return (
@@ -26,8 +27,8 @@ function App() {
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
-        {/* <Route path="/blog" element={<Blog></Blog>}></Route>
-        <Route path="/about" element={<About></About>}></Route> */}
+        <Route path="/blog" element={<Blog></Blog>}></Route>
+
         <Route path="/services" element={<Services></Services>}></Route>
         <Route
           path="/forgotPassword"

@@ -18,7 +18,7 @@ const Header = () => {
       <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
         <Container>
           <Navbar.Brand as={Link} to="/home" className="fs-4">
-            Doctor XYZ
+            CAR HUB
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
@@ -28,9 +28,6 @@ const Header = () => {
               </Nav.Link>
               <Nav.Link as={Link} to="/blog" className="text-white fs-5">
                 BLOG
-              </Nav.Link>
-              <Nav.Link as={Link} to="/about" className="text-white fs-5">
-                ABOUT
               </Nav.Link>
               {user && (
                 <Nav.Link as={Link} to="/dashboard" className="text-white fs-5">
