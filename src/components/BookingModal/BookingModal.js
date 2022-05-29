@@ -29,7 +29,7 @@ const BookingModal = (props) => {
       phoneNumber,
     };
 
-    fetch("http://localhost:5000/order", {
+    fetch("https://sheltered-reaches-94417.herokuapp.com/order", {
       method: "POST",
       headers: {
         "content-type": "application/json",

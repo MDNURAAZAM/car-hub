@@ -10,14 +10,16 @@ const MyOrders = () => {
 
   useEffect(() => {
     if (user) {
-      fetch(`http://localhost:5000/order?email=${user.email}`)
+      fetch(
+        `https://sheltered-reaches-94417.herokuapp.com/order?email=${user.email}`
+      )
         .then((res) => res.json())
         .then((data) => setOrders(data));
     }
   }, [user, orders]);
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/order/${id}`, {
+    fetch(`https://sheltered-reaches-94417.herokuapp.com/order/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

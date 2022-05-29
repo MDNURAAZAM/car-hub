@@ -11,7 +11,7 @@ const Checkout = () => {
   const [modalShow, setModalShow] = React.useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${productId}`)
+    fetch(`https://sheltered-reaches-94417.herokuapp.com/products/${productId}`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, [productId]);
