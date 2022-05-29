@@ -16,6 +16,7 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import MyOrders from "./components/Dashboard/MyOrders";
 import AddReview from "./components/Dashboard/AddReview";
 import Blog from "./components/Blog/Blog";
+import MyProfile from "./components/Dashboard/MyProfile";
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
         >
           <Route index element={<MyOrders></MyOrders>}></Route>
           <Route path="addReview" element={<AddReview></AddReview>}></Route>
+          <Route path="myProfile" element={<MyProfile></MyProfile>}></Route>
         </Route>
 
         <Route path="*" element={<NotFound></NotFound>}></Route>

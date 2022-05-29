@@ -4,7 +4,7 @@ import Review from "../Review/Review";
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch("reviews.json")
+    fetch("http://localhost:5000/reviews")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);
@@ -14,7 +14,7 @@ const Reviews = () => {
       <div className="reviews container mb-5">
         <div className="row w-100">
           {reviews.map((review) => (
-            <Review key={review.id} review={review}></Review>
+            <Review key={review._id} review={review}></Review>
           ))}
         </div>
       </div>

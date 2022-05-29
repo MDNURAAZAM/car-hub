@@ -36,7 +36,9 @@ const MyOrders = () => {
             <th>Price</th>
             <th>Quantity</th>
             <th>Cost</th>
-            <th>Delete</th>
+
+            <th>Payment</th>
+            <th>Cancel</th>
           </tr>
         </thead>
         <tbody className="text-center">
@@ -46,6 +48,10 @@ const MyOrders = () => {
               <td>${order.price}</td>
               <td>{order.quantity}</td>
               <td>${order.price * order.quantity}</td>
+
+              <td>
+                <button className="btn btn-success btn-sm px-3">PAY</button>
+              </td>
               <td>
                 <button
                   className="btn btn-danger btn-sm px-3"

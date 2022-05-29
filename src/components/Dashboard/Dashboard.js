@@ -23,6 +23,13 @@ const Dashboard = () => {
                 </button>
               </Link>
             </div>
+            <div className="col-12 mb-3">
+              <Link to="/dashboard/MyProfile">
+                <button className="btn btn-lg btn-primary w-50">
+                  MY PROFILE
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
         <div className="col-8">
