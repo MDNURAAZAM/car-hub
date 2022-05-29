@@ -17,6 +17,7 @@ import MyOrders from "./components/Dashboard/MyOrders";
 import AddReview from "./components/Dashboard/AddReview";
 import Blog from "./components/Blog/Blog";
 import MyProfile from "./components/Dashboard/MyProfile";
+import MyPortfolio from "./components/MyPortfolio/MyPortfolio";
 
 function App() {
   return (
@@ -29,6 +30,10 @@ function App() {
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/blog" element={<Blog></Blog>}></Route>
+        <Route
+          path="/myPortfolio"
+          element={<MyPortfolio></MyPortfolio>}
+        ></Route>
 
         <Route path="/services" element={<Services></Services>}></Route>
         <Route
