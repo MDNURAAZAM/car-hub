@@ -14,7 +14,7 @@ const AddReview = () => {
     const description = desRef.current.value;
     const rating = parseInt(ratingRef.current.value);
     const review = { name: user?.displayName, description, rating };
-    fetch("http://localhost:5000/review", {
+    fetch("https://sheltered-reaches-94417.herokuapp.com/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",
