@@ -1,6 +1,6 @@
 import { async } from "@firebase/util";
 import { sendEmailVerification } from "firebase/auth";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import {
   useCreateUserWithEmailAndPassword,
@@ -8,6 +8,7 @@ import {
 } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
+import Loading from "../../Loading/Loading";
 
 const Register = () => {
   const emailRef = useRef("");
@@ -16,28 +17,33 @@ const Register = () => {
   const [agree, setAgree] = useState(false);
   const navigate = useNavigate();
   const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    useCreateUserWithEmailAndPassword(auth);
 
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
-  const handleRegisterSubmit = async (event) => {
+  const handleRegisterSubmit = (event) => {
     event.preventDefault();
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
     const name = nameRef.current.value;
-    await createUserWithEmailAndPassword(email, password);
-    await updateProfile({ displayName: name });
+    createUserWithEmailAndPassword(email, password);
+    updateProfile({ displayName: name });
   };
 
+  if (loading) {
+    return <Loading></Loading>;
+  }
+
   if (user) {
-    navigate("/home");
     console.log(user);
+
+    navigate("/home");
   }
   return (
     <div className="container w-50 mx-auto border border-1 shadow mt-3 p-5">
       <h2 className="text-primary text-center">Please Register</h2>
       <Form onSubmit={handleRegisterSubmit}>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Group className="mb-3" controlId="formBasicName">
           <Form.Label>Name</Form.Label>
           <Form.Control
             ref={nameRef}
