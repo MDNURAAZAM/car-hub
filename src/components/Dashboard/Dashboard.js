@@ -14,9 +14,16 @@ const Dashboard = () => {
       <div className="row shadow">
         <div className="col-4 mt-5">
           <div className="row">
+            <div className="col-12 mb-3">
+              <Link to="/dashboard">
+                <button className="btn btn-lg btn-primary w-50">
+                  MY PROFILE
+                </button>
+              </Link>
+            </div>
             {!admin && (
               <div className="col-12 mb-3">
-                <Link to="/dashboard">
+                <Link to="/dashboard/myOrders">
                   <button className="btn btn-lg btn-primary w-50">
                     MY ORDERS
                   </button>
@@ -32,18 +39,21 @@ const Dashboard = () => {
                 </Link>
               </div>
             )}
-            <div className="col-12 mb-3">
-              <Link to="/dashboard/MyProfile">
-                <button className="btn btn-lg btn-primary w-50">
-                  MY PROFILE
-                </button>
-              </Link>
-            </div>
+
             {admin && (
               <div className="col-12 mb-3">
                 <Link to="/dashboard/users">
                   <button className="btn btn-lg btn-primary w-50">
                     ALL USERS
+                  </button>
+                </Link>
+              </div>
+            )}
+            {admin && (
+              <div className="col-12 mb-3">
+                <Link to="/dashboard/manageOrders">
+                  <button className="btn btn-lg btn-primary w-50">
+                    ALL ORDERS
                   </button>
                 </Link>
               </div>

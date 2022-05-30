@@ -19,8 +19,14 @@ import Blog from "./components/Blog/Blog";
 import MyProfile from "./components/Dashboard/MyProfile";
 import MyPortfolio from "./components/MyPortfolio/MyPortfolio";
 import Users from "./components/Users/Users";
+import ManageOrders from "./components/Dashboard/ManageOrders";
+import { useAuthState } from "react-firebase-hooks/auth";
+import useAdmin from "./hooks/useAdmin";
+import auth from "./firebase.init";
 
 function App() {
+  const [user] = useAuthState(auth);
+  const [admin] = useAdmin(user);
   return (
     <div className="App">
       <Header></Header>
@@ -57,10 +63,21 @@ function App() {
             </RequireAuth>
           }
         >
-          <Route index element={<MyOrders></MyOrders>}></Route>
-          <Route path="addReview" element={<AddReview></AddReview>}></Route>
-          <Route path="myProfile" element={<MyProfile></MyProfile>}></Route>
-          <Route path="users" element={<Users></Users>}></Route>
+          <Route index element={<MyProfile></MyProfile>}></Route>
+          {!admin && (
+            <Route path="myOrders" element={<MyOrders></MyOrders>}></Route>
+          )}
+          {!admin && (
+            <Route path="addReview" element={<AddReview></AddReview>}></Route>
+          )}
+
+          {admin && <Route path="users" element={<Users></Users>}></Route>}
+          {admin && (
+            <Route
+              path="manageOrders"
+              element={<ManageOrders></ManageOrders>}
+            ></Route>
+          )}
         </Route>
 
         <Route path="*" element={<NotFound></NotFound>}></Route>
