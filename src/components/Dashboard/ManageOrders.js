@@ -10,7 +10,9 @@ const ManageOrders = () => {
     isLoading,
     refetch,
   } = useQuery("users", () =>
-    fetch(`http://localhost:5000/orders`).then((res) => res.json())
+    fetch(`https://sheltered-reaches-94417.herokuapp.com/orders`).then((res) =>
+      res.json()
+    )
   );
 
   if (isLoading) {
