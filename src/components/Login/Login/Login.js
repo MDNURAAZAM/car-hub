@@ -3,6 +3,8 @@ import { Button, Form } from "react-bootstrap";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
+import useToken from "../../../hooks/useToken";
+import Loading from "../../Loading/Loading";
 import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Login = () => {
@@ -12,6 +14,7 @@ const Login = () => {
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
 
+  const [token] = useToken(user);
   const navigate = useNavigate();
   let from = location.state?.from?.pathname || "/";
 
@@ -29,24 +32,11 @@ const Login = () => {
       </div>
     );
   }
+  if (loading) {
+    return <Loading></Loading>;
+  }
 
   if (user) {
-    // const email = user?.user?.email;
-    // const currentUser = { email: email };
-    // console.log(currentUser);
-    // if (email) {
-    //   fetch(`http://localhost:5000/user/${email}`, {
-    //     method: "PUT",
-    //     headers: {
-    //       "content-type": "application/json",
-    //     },
-    //     body: JSON.stringify(currentUser),
-    //   })
-    //     .then((res) => res.json())
-    //     .then((data) => {
-    //       console.log(data);
-    //     });
-    // }
     navigate(from, { replace: true });
   }
 
@@ -88,7 +78,7 @@ const Login = () => {
         </span>
       </p>
       <p className="mt-3">
-        New to Doctor ANY?{" "}
+        New to CAR HUB?{" "}
         <span className="text-primary">
           <Link to="/register" style={{ textDecoration: "none" }}>
             Please Register

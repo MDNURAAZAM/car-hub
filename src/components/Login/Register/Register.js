@@ -8,6 +8,7 @@ import {
 } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
+import useToken from "../../../hooks/useToken";
 import Loading from "../../Loading/Loading";
 
 const Register = () => {
@@ -29,6 +30,16 @@ const Register = () => {
     createUserWithEmailAndPassword(email, password);
     updateProfile({ displayName: name });
   };
+
+  const [token] = useToken(user);
+  let errorElement = "";
+  if (error) {
+    errorElement = (
+      <div>
+        <p className="text-danger">Error: {error.message}</p>
+      </div>
+    );
+  }
 
   if (loading) {
     return <Loading></Loading>;
@@ -80,6 +91,7 @@ const Register = () => {
         <Button variant="primary" type="submit" disabled={!agree}>
           Register
         </Button>
+        {errorElement}
       </Form>
       <p className="mt-3">
         Already Registered?{" "}

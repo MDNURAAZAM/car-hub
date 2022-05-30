@@ -18,6 +18,7 @@ import AddReview from "./components/Dashboard/AddReview";
 import Blog from "./components/Blog/Blog";
 import MyProfile from "./components/Dashboard/MyProfile";
 import MyPortfolio from "./components/MyPortfolio/MyPortfolio";
+import Users from "./components/Users/Users";
 
 function App() {
   return (
@@ -59,6 +60,7 @@ function App() {
           <Route index element={<MyOrders></MyOrders>}></Route>
           <Route path="addReview" element={<AddReview></AddReview>}></Route>
           <Route path="myProfile" element={<MyProfile></MyProfile>}></Route>
+          <Route path="users" element={<Users></Users>}></Route>
         </Route>
 
         <Route path="*" element={<NotFound></NotFound>}></Route>

@@ -43,7 +43,7 @@ const MyOrders = () => {
         </thead>
         <tbody className="text-center">
           {orders.map((order) => (
-            <tr>
+            <tr key={order._id}>
               <td>{order.product}</td>
               <td>${order.price}</td>
               <td>{order.quantity}</td>

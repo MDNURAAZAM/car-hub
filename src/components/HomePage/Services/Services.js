@@ -15,7 +15,7 @@ const Services = () => {
       <h2 className="text-primary text-center mt-5 fs-1">PRODUCTS</h2>
       <CardGroup className="m-5">
         {services.map((service) => (
-          <Service service={service} key={service.id}></Service>
+          <Service service={service} key={service._id}></Service>
         ))}
       </CardGroup>
     </div>
