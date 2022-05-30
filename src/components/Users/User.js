@@ -5,7 +5,7 @@ const User = ({ user, refetch }) => {
   const { email, role } = user;
 
   const makeAdmin = () => {
-    fetch(`http://localhost:5000/user/admin/${email}`, {
+    fetch(`https://sheltered-reaches-94417.herokuapp.com/user/admin/${email}`, {
       method: "PUT",
     })
       .then((res) => res.json())
@@ -16,7 +16,7 @@ const User = ({ user, refetch }) => {
   };
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/user/${email}`, {
+    fetch(`https://sheltered-reaches-94417.herokuapp.com/user/${email}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
